@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Large project data and processed files
+*.pkl
+*.csv
+*.zip
