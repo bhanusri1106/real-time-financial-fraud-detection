@@ -1,14 +1,6 @@
-## Project Status
+### Sample Test Results
 
-The real-time fraud detection pipeline has been tested successfully.
-
-### Tested Components
-
-* **Kafka:** Transaction producer sent a transaction to the `transactions` topic.
-* **Apache Spark Structured Streaming:** Received and processed the transaction.
-* **XGBoost:** Loaded the trained fraud detection model and generated a prediction.
-
-### Sample Test Result
+**Test 1**
 
 | Field             | Result                    |
 | ----------------- | ------------------------- |
@@ -17,13 +9,14 @@ The real-time fraud detection pipeline has been tested successfully.
 | Fraud Probability | 0.000024                  |
 | Prediction        | 0 — Not detected as fraud |
 
-**Note:** This is one test transaction. The result does not establish overall model accuracy.
+**Test 2**
 
-### Current Technology Stack
+| Field             | Result                    |
+| ----------------- | ------------------------- |
+| Transaction Type  | TRANSFER                  |
+| Amount            | 2,000,000                 |
+| Fraud Probability | 0.823884                  |
+| Prediction        | 0 — Not detected as fraud |
 
-* Python
-* Apache Kafka
-* Apache Spark Structured Streaming
-* XGBoost
-* PaySim transaction dataset
+**Note:** These are two test transactions, not a measurement of overall model accuracy. The configured fraud threshold is 0.99, so neither prediction crossed the threshold.
 
