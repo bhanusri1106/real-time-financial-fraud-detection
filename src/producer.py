@@ -9,7 +9,7 @@ producer = KafkaProducer(
 transaction = {
     "step": 1,
     "type": "TRANSFER",
-    "amount": 5000,
+    "amount": 1000000,
     "oldbalanceOrg": 10000,
     "newbalanceOrig": 5000,
     "oldbalanceDest": 2000,
