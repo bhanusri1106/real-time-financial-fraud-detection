@@ -7,13 +7,13 @@ producer = KafkaProducer(
 )
 
 transaction = {
-    "step": 1,
+    "step": 2,
     "type": "TRANSFER",
-    "amount": 1000000,
-    "oldbalanceOrg": 10000,
-    "newbalanceOrig": 5000,
-    "oldbalanceDest": 2000,
-    "newbalanceDest": 7000
+    "amount": 2000000,
+    "oldbalanceOrg": 2000000,
+    "newbalanceOrig": 0,
+    "oldbalanceDest": 0,
+    "newbalanceDest": 2000000
 }
 
 producer.send("transactions", value=transaction)
